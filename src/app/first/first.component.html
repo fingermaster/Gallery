@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row gbox">        
         <div *ngFor="let image of images; index as i" style="background-image: url({{image.src}})">
-            <img src="{{image.src}}">
-            <img src="{{image.like ? '/assets/iface/yes.svg' : '/assets/iface/almost.svg' }}" class="like">
+            <img src="{{image.src}}" (click)="setDetail(i)">
+            <img src="{{image.like ? '/assets/iface/yes.svg' : '/assets/iface/almost.svg' }}" class="like" (click)="toggleLike(i)">
             <span class="liked">Liked {{image.liked}} times<br>Has {{image.comments}} comments</span>
         </div>
     </div>
@@ -21,10 +21,18 @@
         </ul>    
         <p>Rerum dolore tempora unde quas laudantium ut? Quos rem doloribus corporis praesentium id illo explicabo, nulla, enim alias cumque natus unde non libero est voluptas magni expedita pariatur eligendi laborum similique numquam? </p>
            
-        <button class="closebtn" onclick="info.style.display = 'none'">Klaatu barada nikto <sup>(hide)</sup></button>
+        <button class="closebtn" onclick="info.style.display = 'none'">Klaatu barada nikto <br><small>(hide this block)</small></button>
     </div>    
 </div>
-<div class="overlay">
-    <div class="imd-detail"></div>
-    <input type="text" placeholder="Your comment"><button>Leave a comment</button>
+<div class="overlay" style="display: {{detail.display ? 'flex' : 'none'}}">
+    <div class="hidediv" (click)="detail.display = 0"></div>
+    
+    <div class="detail_box">
+        <div class="img_detail"  style="background-image: url({{detail.img.src}})" ><img src="{{detail.img.src}}"></div>
+        <div class="detail_side">
+            <appComments [id]='detail.id'></appComments>            
+        </div>
+    </div>
+
+    <div class="hidediv" (click)="detail.display = 0"></div>
 </div>
