@@ -10,7 +10,7 @@ export class FirstComponent {
         src: '', like: 0, liked: 0, comments: 0
     }];    
     detail: {id: number, display: number, img: {src: string, like: number, liked: number, comments: number}} = {
-        id: 3, display: 1, img: {src: './assets/img/n_02.jpg', like: 0, liked: 0, comments: 0}
+        id: 3, display: 0, img: {src: './assets/img/n_02.jpg', like: 0, liked: 0, comments: 0}
     };
 
     constructor(){
@@ -21,7 +21,7 @@ export class FirstComponent {
         }        
     }
     setDetail(i: number){
-        this.detail = {id: i, display: 0, img: this.images[i] };
+        this.detail = {id: i, display: 1, img: this.images[i] };
     }
     toggleLike(i: number){
         if(this.images[i].like == 0) this.images[i].like = 1;

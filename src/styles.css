@@ -15,7 +15,6 @@ h2 {
     display: block;
     font-size: calc(1vh + 18px);
     margin: 0;
-    text-orientation: sideways;
 }
 div {
     box-sizing: border-box;
@@ -39,9 +38,8 @@ div {
 }
 .gbox div {
     flex: auto;
-    background-size: 120%;
-    background-position-x: -10px;
-    background-position-y: -10px;
+    background-size: 100%;
+    
     filter: contrast(.85) grayscale(0.73);
     z-index: 1;
 }
@@ -68,7 +66,7 @@ div {
     border-radius: 0em;
     filter: opacity(0);
     margin: 0em;
-    height: 72vh;
+    height: 62vh;
     width: max-content;
 }
 .gbox div img.like {
@@ -193,10 +191,10 @@ div {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     background-size: cover;
-    height: 90vh;
+    height: 86vh;
 }
 .overlay .detail_box .img_detail img {
-    height: 90vh;    
+    height: 86vh;    
     opacity: 0.1;
 }
 .overlay .detail_side {
@@ -206,11 +204,11 @@ div {
     padding: 15px;    
     max-width: 30vw;
     background: linear-gradient(200deg, #18817cAA,#ccdd42AA);
-    height: 90vh;
+    height: 86vh;
     position: relative;
 }
 .comments {
-    max-width: 35vw;
+    width: 20vw;    
 }
 .comments .item {
     display: flex;
