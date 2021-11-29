@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row gbox">        
+        <div *ngFor="let image of images; index as i" style="background-image: url({{image.src}})">
+            <img src="{{image.src}}">
+            <img src="{{image.like ? '/assets/iface/yes.svg' : '/assets/iface/almost.svg' }}" class="like">
+            <span class="liked">Liked {{image.liked}} times<br>Has {{image.comments}} comments</span>
+        </div>
+    </div>
+    
+    <div class="desc" id="info" >
+        <h2>Lorem, ipsum dolor</h2> 
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero molestiae optio repellat libero, quibusdam omnis expedita labore ea dolore harum iste at<br>
+            facere possimus iure error dignissimos asperiores necessitatibus consequatur eaque:</p>
+        <ul>            
+            <li>Trem dicta ipsamam assumenda? </li>
+            <li>Ratione aliquid necessitatibus esse distinctio, qui cumque id velit nobis temporibus eveniet quas</li>
+            <li>Cum harum molestias minima accusamus incidunt, perspiciatis modi quod nihil nulla</li>
+            <li>Dignissimos itaque odit facere ut laboriosam voluptatem dolorem ipsam cum rerum. Odit, mollitia nulla? Exercitationem dicta tenetur ex, odio nulla ipsa.</li>
+            <li>Voluptatum, at repellat rem, impedit ad quis, neque dolorum a quo dolorem deserunt similique obcaecati minus necessitatibus itaque excepturi</li>
+              
+        </ul>    
+        <p>Rerum dolore tempora unde quas laudantium ut? Quos rem doloribus corporis praesentium id illo explicabo, nulla, enim alias cumque natus unde non libero est voluptas magni expedita pariatur eligendi laborum similique numquam? </p>
+           
+        <button class="closebtn" onclick="info.style.display = 'none'">Klaatu barada nikto <sup>(hide)</sup></button>
+    </div>    
+</div>
+<div class="overlay">
+    <div class="imd-detail"></div>
+    <input type="text" placeholder="Your comment"><button>Leave a comment</button>
+</div>
