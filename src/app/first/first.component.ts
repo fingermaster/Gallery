@@ -21,7 +21,7 @@ export class FirstComponent {
         }        
     }
     setDetail(i: number){
-        this.detail = {id: i, display: 1, img: this.images[i] };
+        this.detail = {id: i, display: 0, img: this.images[i] };
     }
     toggleLike(i: number){
         if(this.images[i].like == 0) this.images[i].like = 1;
